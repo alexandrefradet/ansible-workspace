@@ -1,0 +1,11 @@
+---
+- name: Copy bash_alias file
+  copy:
+    src: files/.bash_aliases
+    # TODO : var on username
+    dest: /home/alex/.bash_aliases
+    owner: alex
+    group: alex
+    mode: u=rw,g=r,o=r
+    backup: yes
+

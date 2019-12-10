@@ -1,0 +1,22 @@
+#     <type>(<scope>): <subject>
+#     <BLANK LINE>
+#     <body>
+#     <BLANK LINE>
+#     <footer>
+# 
+#  - The HEADER is a single line of max. 50 characters.
+#       + <type> Allowed types are:
+#             * feat (feature)
+#             * fix (bug fix)
+#             * docs (documentation)
+#             * style (formatting, missing semicolons, …)
+#             * refactor
+#             * test (when adding missing tests)
+#             * chore (maintain)
+#       + <scope> can be anything specifying the place of the commit change
+#       + <subject> is a very short description of the change, in the following format:
+#             * imperative, present tense
+#             * no capitalised first letter
+#             * no dot (.) at the end
+#  - The BODY should include the motivation for the change and must be phrased in imperative present tense 
+#  - The FOOTER : information about breaking changes + reference issues/ticket closed

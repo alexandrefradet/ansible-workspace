@@ -1,0 +1,5 @@
+---
+dotfiles_bash_alias_enable: true
+dotfiles_git_template_enable: true
+# dotfiles_git_conf_enable: true
+username: admin
