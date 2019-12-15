@@ -1,1 +1,3 @@
 *.retry
+playbooks/var/*
+!playbooks/var/.gitkeep

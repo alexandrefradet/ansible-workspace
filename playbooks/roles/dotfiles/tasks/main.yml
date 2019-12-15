@@ -3,5 +3,5 @@
   when: dotfiles_bash_alias_enable
 - include_tasks: 02-copy_git_template.yaml
   when: dotfiles_git_template_enable
-# - include_tasks: 03-copy_git_conf.yaml
-#    when: dotfiles_git_conf_enable
+- include_tasks: 03-setup_gitconfig.yaml
+  when: dotfiles_git_conf_enable

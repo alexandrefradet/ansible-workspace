@@ -1,5 +1,7 @@
 ---
 - hosts: test
+  vars_files:
+    - var/main.yaml
   #localhost
   # connection: local
   # become: true

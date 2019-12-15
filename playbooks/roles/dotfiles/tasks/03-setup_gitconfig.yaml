@@ -1,0 +1,9 @@
+---
+- name: Setup git config
+  template:
+    src: ../templates/.gitconfig.j2 
+    dest: /home/alex/.gitconfig 
+    owner: root
+    group: root
+    # mode:  chmod
+    backup: true
