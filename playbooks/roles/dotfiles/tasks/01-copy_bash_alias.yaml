@@ -4,8 +4,9 @@
     src: files/.bash_aliases
     # TODO : var on username
     dest: /home/alex/.bash_aliases
-    owner: alex
-    group: alex
+    # TODO change to alex / var username
+    owner: root
+    group: root
     mode: u=rw,g=r,o=r
     backup: yes
 
