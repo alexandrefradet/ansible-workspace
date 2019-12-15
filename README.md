@@ -16,6 +16,10 @@ To run a test on playbook, run script 'run_test.sh', this will build the test im
 Script handles following flags / var :
 -k / --keep : prevent the docker container deletion at the end of the test
 
+### Error case
+"Failed to connect to the host via ssh: ssh: connect to host localhost port 32768: Connection refused\r\n"
+=> Check docker logs, you probably already had an existing container with that name (used -k flag ?).
+
 ## Current
 - Building dotfiles roles
 - Improve script test to specify playbook to run / variabalize in some way.
