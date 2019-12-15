@@ -1,5 +1,22 @@
 ---
+- name: Check home .git dir existence
+  stat:
+    path: /home/alex/.git
+  register: git_home_dir
+
+- name: Creater dir .git if not existing
+  file:
+    path: /home/alex/.git
+    state: directory
+    owner: root
+    group: root
+  when: not git_home_dir.stat.exists or not git_home_dir.stat.isdir 
+  
 - name: copy git commit
   copy:
     src: files/gitCommitTemplate.txt
-    dest: 
+    dest: /home/alex/.git/gitCommitTemplate.txt
+    owner: root
+    group: root
+    mode: u=rw,g=r,o=r
+    backup: yes
