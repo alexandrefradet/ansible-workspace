@@ -1,0 +1,17 @@
+all:
+  # hosts:
+  # vars:
+  children:
+    # IP local docker de test
+    localhost:
+      hosts:
+        test:
+          ansible_port: 32768
+          ansible_host: localhost
+          ansible_user: root
+          ansible_ssh_pass: root
+          ansible_python_interpreter: /usr/bin/python3
+          # ansible_connection: docker    
+    # tooling:
+    #   hosts:
+    #   vars:

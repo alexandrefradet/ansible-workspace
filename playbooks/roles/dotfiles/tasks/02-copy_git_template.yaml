@@ -1,0 +1,5 @@
+---
+- name: copy git commit
+  copy:
+    src: files/gitCommitTemplate.txt
+    dest: 
