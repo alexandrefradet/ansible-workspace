@@ -1,0 +1,4 @@
+---
+  - name: Install standard packages
+    apt: name={{ item.name }} state=present
+    with_items: "{{ packages }}"

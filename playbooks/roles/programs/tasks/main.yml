@@ -1,0 +1,11 @@
+---
+- include_tasks: 01-install_standard_packages.yaml
+  when: programs_install_standard | bool
+- include_tasks: 02-install_docker.yaml
+  when: programs_install_docker | bool
+- include_tasks: 03-install_java.yaml
+  when: programs_install_java | bool
+# - include_tasks: 04-install_insomnia.yaml
+#   when: programs_install_insomnia 
+# - include_tasks: 05-install_node.yaml
+#   when: programs_install_node 

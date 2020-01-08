@@ -1,0 +1,10 @@
+---
+packages:
+  # - name: ufw
+  # - name: fail2ban
+  # - name: nginx
+  - name: git
+  - name: curl
+
+java_version: "11"
+programs_install_docker: "False"
