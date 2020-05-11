@@ -1,4 +1,9 @@
 ---
+  - name: Update apt repository
+    apt:
+      upgrade: yes
+      update_cache: yes
+      cache_valid_time: 86400 #One day
   - name: Install standard packages
     apt: name={{ item.name }} state=present
     with_items: "{{ packages }}"
