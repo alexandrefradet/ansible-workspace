@@ -1,0 +1,38 @@
+---
+image: quay.io/ansible/molecule:latest
+services:
+  - docker:dind
+
+stages:
+  - tests
+
+before_script:
+  - docker -v
+  - python -V
+  - ansible --version
+  - molecule --version
+
+molecule-role-programs:
+  stage: tests
+  tags:
+    - docker
+  variables:
+    DOCKER_HOST: "tcp://docker:2375"
+    PY_COLORS: 1
+  script:
+    - cd roles/programs/
+    - molecule test
+
+# molecule-role-dotfiles:
+#   stage: tests
+#   tags:
+#     - docker
+#   variables:
+#     DOCKER_HOST: "tcp://docker:2375"
+#     PY_COLORS: 1
+#   script:
+#     - cd roles/dotfiles/
+#     - molecule test
+#   only:
+#     changes:
+#       - roles/dotfiles/**/*
