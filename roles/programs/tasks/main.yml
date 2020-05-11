@@ -1,6 +1,5 @@
 ---
 - include_tasks: 01-install_standard_packages.yaml
-  when: programs_install_standard | bool
 - include_tasks: 02-install_docker.yaml
   when: programs_install_docker | bool
 - include_tasks: 03-install_java.yaml

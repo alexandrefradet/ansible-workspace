@@ -1,5 +1,7 @@
 ---
-programs_install_standard: "True"
+programs_packages_default: "True"
+programs_packages_development: "True"
+programs_packages_server: "True"
 programs_install_docker: "True"
 programs_install_java: "True"
 programs_install_insomnia: "True"

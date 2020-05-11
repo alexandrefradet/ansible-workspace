@@ -1,10 +1,26 @@
 ---
 packages:
-  # - name: ufw
-  # - name: fail2ban
-  # - name: nginx
-  - name: git
-  - name: curl
+  default:
+    - software-properties-common
+    - apt-transport-https
+    - ca-certificates
+    - guake
+    - xclip
+    - keepassxc
+    - htop
+    - net-tools
+    - meld
+
+  development:
+    - curl
+    - shellcheck
+    - git
+    - apache2
+
+  server:
+    - ufw
+    - fail2ban
+    - nginx
 
 java_version: "11"
 programs_install_docker: "False"

@@ -4,6 +4,16 @@
       upgrade: yes
       update_cache: yes
       cache_valid_time: 86400 #One day
-  - name: Install standard packages
-    apt: name={{ item.name }} state=present
-    with_items: "{{ packages }}"
+
+  - name: Install default packages
+    apt: name={{ packages.default }} state=present
+    when: programs_packages_default | bool
+
+
+  - name: Install development packages
+    apt: name={{ packages.development }} state=present
+    when: programs_packages_development | bool
+
+  - name: Install server packages
+    apt: name={{ packages.server }} state=present
+    when: programs_packages_server | bool
