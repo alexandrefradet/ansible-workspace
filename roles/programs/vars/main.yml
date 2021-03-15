@@ -10,6 +10,7 @@ packages:
     - htop
     - net-tools
     - meld
+    - snapd
 
   development:
     - curl
@@ -22,5 +23,9 @@ packages:
     - fail2ban
     - nginx
 
+  snap:
+    - discord
+    - skypeforlinux
+    - slack-desktop
 java_version: "11"
 programs_install_docker: "False"

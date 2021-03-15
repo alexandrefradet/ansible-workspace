@@ -9,7 +9,6 @@
     apt: name={{ packages.default }} state=present
     when: programs_packages_default | bool
 
-
   - name: Install development packages
     apt: name={{ packages.development }} state=present
     when: programs_packages_development | bool
@@ -17,3 +16,9 @@
   - name: Install server packages
     apt: name={{ packages.server }} state=present
     when: programs_packages_server | bool
+
+  - name: Install Snap packages
+    snap: 
+      name: discord
+      channel: latest/stable
+    # with_items: "{{ packages.snap }}"
