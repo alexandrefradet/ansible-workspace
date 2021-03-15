@@ -9,3 +9,4 @@
 - include_tasks: 05-install_node.yaml
   when: programs_install_node | bool
 - include_tasks: 06-install-boostnote.yaml
+- include_tasks: 07-install-sublime.yaml

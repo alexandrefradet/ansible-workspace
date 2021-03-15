@@ -30,5 +30,10 @@ packages:
     - discord
     - skypeforlinux
     - slack-desktop
+
+  dpkg:
+    - sublime-text
+    - sublime-merge
+
 java_version: "11"
 programs_install_docker: "True"
