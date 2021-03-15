@@ -8,3 +8,4 @@
   when: programs_install_insomnia | bool
 - include_tasks: 05-install_node.yaml
   when: programs_install_node | bool
+- include_tasks: 06-install-boostnote.yaml

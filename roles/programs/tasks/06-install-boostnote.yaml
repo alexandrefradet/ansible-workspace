@@ -1,0 +1,16 @@
+---
+- name: Check if boostnote.next is installed
+  command: dpkg-query -W boostnote.next
+  register: boostnote_next_check_deb
+  failed_when: boostnote_next_check_deb.rc > 1
+  changed_when: boostnote_next_check_deb.rc == 1
+
+- name: Download boostnote
+  get_url: 
+    url="https://github.com/BoostIO/BoostNote.next/releases/latest/download/boost-note-linux.deb"
+    dest="/home/alex/Downloads/boost-note-linux.deb"
+  when: boostnote_next_check_deb.rc == 1
+
+- name: Install boostnote
+  apt: deb="/home/alex/Downloads/boost-note-linux.deb"
+  when: boostnote_next_check_deb.rc == 1
