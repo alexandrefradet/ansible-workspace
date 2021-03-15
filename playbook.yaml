@@ -1,0 +1,14 @@
+---
+  - name: "Running local playbook"
+    hosts: localhost
+    connection: local
+    become: true
+
+    tasks:
+      - name: Run programs role
+        include_role:
+          name: programs
+
+      - name: Run dotfiles role
+        include_role:
+          name: dotfiles
