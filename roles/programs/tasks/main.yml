@@ -4,7 +4,7 @@
   when: programs_install_docker | bool
 - include_tasks: 03-install_java.yaml
   when: programs_install_java | bool
-# - include_tasks: 04-install_insomnia.yaml
-#   when: programs_install_insomnia 
-# - include_tasks: 05-install_node.yaml
-#   when: programs_install_node 
+- include_tasks: 04-install_insomnia.yaml
+  when: programs_install_insomnia | bool
+- include_tasks: 05-install_node.yaml
+  when: programs_install_node | bool

@@ -1,6 +1,7 @@
 ---
 packages:
   default:
+    # Utils linux
     - software-properties-common
     - apt-transport-https
     - ca-certificates
@@ -17,6 +18,8 @@ packages:
     - shellcheck
     - git
     - apache2
+    # TODO need snap or add ppa ?
+#    - pgadmin4
 
   server:
     - ufw
@@ -28,4 +31,4 @@ packages:
     - skypeforlinux
     - slack-desktop
 java_version: "11"
-programs_install_docker: "False"
+programs_install_docker: "True"
