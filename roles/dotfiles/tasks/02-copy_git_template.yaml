@@ -8,15 +8,15 @@
   file:
     path: /home/alex/.git
     state: directory
-    owner: root
-    group: root
+    owner: alex
+    group: alex
   when: not git_home_dir.stat.exists or not git_home_dir.stat.isdir 
   
 - name: copy git commit
   copy:
     src: files/gitCommitTemplate.txt
     dest: /home/alex/.git/gitCommitTemplate.txt
-    owner: root
-    group: root
+    owner: alex
+    group: alex
     mode: u=rw,g=r,o=r
     backup: yes
